@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='result.css') }}">
+    <title>Defect Detection Results</title>
+</head>
+<body>
+    <div class="result-container">
+        <h2>Defect Detection Results</h2>
+        <div class="images-side-by-side">
+            <div class="image-section">
+                <h3>Uploaded Image</h3>
+                <img src="{{ url_for('display_image', filename=uploaded_image) }}" alt="Uploaded Image">
+            </div>
+            <div class="image-section">
+                <h3>Processed Image with Defects Highlighted</h3>
+                <img src="{{ url_for('display_image', filename=result_image) }}" alt="Defected Image">
+            </div>
+        </div>
+        <a href="/" class="upload-link">Upload Another Image</a>
+    </div>
+</body>
+</html>
